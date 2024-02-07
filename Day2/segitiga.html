@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Segitiga Bintang</title>
+</head>
+<body>
+
+  <form>
+    <label for="height">Tinggi Segitiga:</label>
+    <input type="number" id="height" min="1" value="5">
+    <button type="button" onclick="cetaksegitiga()">Buat Segitiga</button>
+  </form>
+
+  <div id="triangleContainer"></div>
+
+  <script>
+    function cetaksegitiga() {
+      var height = document.getElementById("height").value;
+      var triangleContainer = document.getElementById("triangleContainer");
+      triangleContainer.innerHTML = "";  // Clear previous triangle
+
+      for (var i = 1; i <= height; i++) {
+        var row = '';
+        for (var j = 1; j <= i; j++) {
+          row += '* ';
+        }
+        if (j >= 1){
+        if (j % 2 == 0) {
+            row += '# ';
+          } else {
+            row += '* ';
+          }}
+        triangleContainer.innerHTML += row + '<br>';
+      }
+    }
+  </script>
+
+</body>
+</html>

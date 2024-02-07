@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <form>
+            1st number: <input type="int" id="a" /><br>
+            2nd number: <input type="int" id="b" /><br>
+            <input type="button" onclick="SumBy()" value="Sum" /><br>
+        </form>
+
+        <script>
+            function SumBy(){
+                num1 = document.getElementById(
+                    "a"
+                ).value;
+                num2 = document.getElementById(
+                    "b"
+                ).value;
+                document.getElementById(
+                    "result"
+                ).innerHTML = a + b;
+            }
+        </script>
+    </body>
+</html>
